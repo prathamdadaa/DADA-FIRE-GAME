@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dada Fire</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Start / lobby screen -->
+  <div id="lobby">
+    <h1>🔥 DADA FIRE 🔥</h1>
+    <p class="subtitle">A battle royale shooter by Pratham Dada</p>
+    <input id="nameInput" type="text" placeholder="Enter your name" maxlength="14" />
+    <button id="joinBtn">DROP INTO THE MAP</button>
+    <p class="controls-hint">WASD to move &nbsp;|&nbsp; Mouse to look &nbsp;|&nbsp; Click to shoot &nbsp;|&nbsp; Space to jump</p>
+  </div>
+
+  <!-- In-game HUD -->
+  <div id="hud" class="hidden">
+    <div id="healthBarWrap">
+      <div id="healthBar"></div>
+      <span id="healthText">100</span>
+    </div>
+    <div id="killFeed"></div>
+    <div id="zoneWarning" class="hidden">⚠ OUTSIDE SAFE ZONE</div>
+    <div id="aliveCount">Players alive: --</div>
+    <div id="crosshair">+</div>
+  </div>
+
+  <!-- Death / win overlay -->
+  <div id="overlay" class="hidden">
+    <h2 id="overlayTitle"></h2>
+    <button id="respawnBtn">PLAY AGAIN</button>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/network.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
