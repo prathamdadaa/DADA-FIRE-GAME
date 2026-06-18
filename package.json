@@ -1,0 +1,19 @@
+{
+  "name": "dada-fire",
+  "version": "1.0.0",
+  "description": "Dada Fire - a simple browser-based 3D multiplayer battle royale shooter, inspired by Free Fire. Created by Pratham Dada.",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "author": "Pratham Dada",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
